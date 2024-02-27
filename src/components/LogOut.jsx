@@ -1,13 +1,9 @@
-import { auth } from "../firebase/config";
+import { logoutToFirebase } from "../firebase/actions";
 
 const LogOut = () => {
-  const logout = () => {
-    auth.signOut();
-  };
-
   return (
     <button
-      onClick={logout}
+      onClick={logoutToFirebase}
       className="bg-darkGrayColor px-4 py-2 text-white hover:bg-darkGrayColor/90"
     >
       Logout
