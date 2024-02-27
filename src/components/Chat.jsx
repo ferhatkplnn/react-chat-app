@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Message from "./Message";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase/config";
+import SendMessage from "./SendMessage";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -32,6 +33,7 @@ const Chat = () => {
           ))}
       </main>
       {/* Send Message Component */}
+      <SendMessage />
       <span ref={scroll}></span>
     </>
   );
