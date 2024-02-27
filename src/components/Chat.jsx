@@ -26,15 +26,15 @@ const Chat = () => {
 
   return (
     <>
-      <main className="flex flex-col p-[10px] relative">
+      <main className="flex flex-col p-[10px] pb-14 relative overflow-auto">
         {messages &&
           messages.map((message) => (
             <Message key={message.id} message={message} />
           ))}
+        <span ref={scroll}></span>
       </main>
       {/* Send Message Component */}
-      <SendMessage />
-      <span ref={scroll}></span>
+      <SendMessage scroll={scroll} />
     </>
   );
 };
