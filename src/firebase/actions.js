@@ -34,3 +34,11 @@ export const googleSignInToFirebase = async () => {
     console.error("Error signing in with Google:", error);
   }
 };
+
+export const logoutToFirebase = async () => {
+  try {
+    await auth.signOut();
+  } catch (error) {
+    console.error("Logout failed", error);
+  }
+};
