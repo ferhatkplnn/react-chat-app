@@ -31,7 +31,7 @@ const SendMessage = ({ scroll }) => {
         placeholder="Message"
         className="w-full text-xl p-3 bg-chatInputColor text-darkGrayColor  outline-none border-none"
       />
-      <button type="submit" className="w-[20%] bg-green-500">
+      <button type="submit" className="w-[20%] bg-red-600 text-white">
         Send
       </button>
     </form>
