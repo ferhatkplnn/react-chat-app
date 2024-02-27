@@ -1,3 +1,4 @@
+import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
 
 import { auth } from "./firebase/config";
@@ -13,6 +14,7 @@ const App = () => {
         {/* Navbar */}
         <Navbar />
         {/* Chat component */}
+        <Chat />
       </section>
     </div>
   );
