@@ -14,7 +14,8 @@ const App = () => {
         {/* Navbar */}
         <Navbar />
         {/* Chat component */}
-        <Chat />
+        {user && <Chat />}
+        {/* <Chat /> */}
       </section>
     </div>
   );
