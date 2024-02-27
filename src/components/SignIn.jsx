@@ -1,10 +1,15 @@
+// Import necessary Firebase and authentication components
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import GoogleButton from "react-google-button";
 import { auth } from "../firebase/config";
 
-const googleSignIn = () => {
+const googleSignIn = async () => {
   const provider = new GoogleAuthProvider();
-  signInWithRedirect(auth, provider);
+  try {
+    await signInWithRedirect(auth, provider);
+  } catch (error) {
+    console.error("Error signing in with Google:", error);
+  }
 };
 
 const SignIn = () => {
