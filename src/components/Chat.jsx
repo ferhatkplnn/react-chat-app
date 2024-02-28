@@ -3,8 +3,10 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase/config";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const Chat = () => {
+  const [parent, enableAnimations] = useAutoAnimate();
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const scroll = useRef(null);
@@ -33,7 +35,10 @@ const Chat = () => {
 
   return (
     <>
-      <main className="flex flex-col p-[10px] pb-14 relative overflow-auto">
+      <main
+        ref={parent}
+        className="flex flex-col p-[10px] pb-14 relative overflow-auto h-full"
+      >
         {renderMessages()}
         <span ref={scroll}></span>
       </main>

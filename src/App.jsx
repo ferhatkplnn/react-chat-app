@@ -1,6 +1,5 @@
 import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
-
 import { auth } from "./firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 
