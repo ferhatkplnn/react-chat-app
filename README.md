@@ -1,14 +1,14 @@
 # Chat Application
 
-[DEMO](https://lustrous-daifuku-ce7f7a.netlify.app/)
+[DEMO](https://react-chat-app-vvv.netlify.app/)
 
 A simple and easy-to-use chat application built with React, Tailwind, and Firebase.
 
 ## Features
 
-- Google authentication for secure login  
-- Real-time messaging with Firebase  
-- User-friendly interface with Tailwind CSS  
+- Google authentication for secure login
+- Real-time messaging with Firebase
+- User-friendly interface with Tailwind CSS
 
 ## Images
 
